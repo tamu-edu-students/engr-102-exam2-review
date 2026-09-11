@@ -9,3 +9,5 @@ These materials are still under construction. Come back later for the final vers
 These review materials are to help you study. They will NOT be available during the exam. Good luck!!!
 
 Try out [this word search](ENGR_102_Exam2_Word_Search.pdf) for fun!
+
+Also try out [this crossword](ENGR_102_Exam2_Crossword.pdf) for fun!
