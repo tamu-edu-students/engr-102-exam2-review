@@ -67,6 +67,31 @@ print(mytuple)
 ```
 
 ## Functions
+Functions are defined before they are called. The first line is called the function header.
+```python
+def my_function():
+    """this functions prints something"""
+    print("something")
+```
+
+Functions can take in arguments. Default arguments must be defined from right to left.
+```python
+def myfun(a, b=12): # b has a default value of 12
+    """this function adds a and b"""
+    return a + b
+```
+Calling `myfun(1)` will return `13`. Calling `myfun(1, 2)` will return `3`.
+
+Scope of variables refers to what part of your code has access to variables. Functions can read values assigned in main code, but they cannot reassign them. Variables assigned inside a function are local only to that function. For example, in the code below `a` is assigned the value `3` in main memory. That same value is passed to the function in the function call `myfun(a)`. A new variable `a` is created in function memory with a copy of the value `3`. Function memory `a` changes to `4`, but main memory `a` remains `3`. When we exit the function, all variables local to that function are removed from memory.
+```python
+def myfun(a):
+    a += 1
+    return a
+a = 3
+print(myfun(a), end="")
+print(a)
+```
+will output `43`
 
 ## Debugging
 
