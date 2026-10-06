@@ -126,6 +126,11 @@ print(a)
 will output `43`
 
 ## Debugging
+There are three types of errors
+- `syntax` the code will not run at all
+- `run-time` errors that occur at run-time, often referred to as an `exception`
+- `logic` a mistake in how the code works
+
 The `try-except` block is a great way to catch run-time errors. Put code that may create a run-time error into the `try` block. Put your fix to the potential run-time error into the `except` block.
 ```python
 try:
@@ -135,7 +140,14 @@ except:
     print("I said integer!")
 ```
 
-Try-except blocks are useful when dealing with user input. In the code above, if the user enters `3` the output will be `howdyhowdyhowdy`. If the user enters `no` the output will be `I said integer!`. Another good use for a try-except block is to check if a file exists before attempting to read from it. 
+Try-except blocks are useful when dealing with user input. In the code above, if the user enters `3` the output will be `howdyhowdyhowdy`. If the user enters `no` the output will be `I said integer!`. Another good use for a try-except block is to check if a file exists before attempting to read from it.
+
+Use the `DRIFT` method for debugging
+- **D**iscover: find a repeatable problem
+- **R**eproduce: create a test case that reliably gives the wrong answer
+- **I**solate: narrow down the location in the code where the issue arises
+- **F**ix: try to fix the bug
+- **T**est: check if the code now passes the test case
 
 ## File IO
 There are two ways to open a file. You need to specify a file identifier (variable name) in your code. You can use separate open/close commands, but don't forget to close your file using the same file identifier!
