@@ -58,6 +58,20 @@ This class covers the following data types
 | Dictionary | `{}`, `{"one" : 1, "two" : 2}` | keys are immutable, values are mutable |
 | Tuple | `()`, `(1, 2, 3)` | immutable |
 
+You can unpack a tuple to put each value into its own variable
+```python
+mytuple = 1, 2, 3
+a, b, c = mytuple
+```
+
+You can easily swap variable values as well
+```python
+x = 7
+y = 6
+x, y = y, x
+print(x, y)
+```
+
 Be careful when assigning a mutable data type in a tuple. The tuple's bindings are immutable, however the objects bound to it may change if they are a mutable data type.
 ```python
 mylist = [1, 2, 3]
@@ -82,6 +96,23 @@ def myfun(a, b=12): # b has a default value of 12
 ```
 Calling `myfun(1)` will return `13`. Calling `myfun(1, 2)` will return `3`.
 
+Functions can only return one object, but if that object is a tuple it can contain multiple values.
+```python
+def myfun(a, b=12): # b has a default value of 12
+    """this function adds, subtracts, multiplies, and divides a and b"""
+    return a + b, a - b, a * b, a / b
+print(myfun(6))
+ans = myfun(1, 2)
+print(f"a+b:{ans[0]} a-b:{ans[1]} a*b:{ans[2]} a/b:{ans[3]}")
+```
+will output 
+```
+(18, -6, 72, 0.5)
+a+b:3 a-b:-1 a*b:2 a/b:0.5
+```
+
+
+
 Scope of variables refers to what part of your code has access to variables. Functions can read values assigned in main code, but they cannot reassign them. Variables assigned inside a function are local only to that function. For example, in the code below `a` is assigned the value `3` in main memory. That same value is passed to the function in the function call `myfun(a)`. A new variable `a` is created in function memory with a copy of the value `3`. Function memory `a` changes to `4`, but main memory `a` remains `3`. When we exit the function, all variables local to that function are removed from memory.
 ```python
 def myfun(a):
@@ -94,7 +125,74 @@ print(a)
 will output `43`
 
 ## Debugging
+The `try-except` block is a great way to catch run-time errors. Put code that may create a run-time error into the `try` block. Put your fix to the potential run-time error into the `except` block.
+```python
+try:
+    a = int(input("Enter an integer: "))
+    print("howdy" * a)
+except:
+    print("I said integer!")
+```
+
+Try-except blocks are useful when dealing with user input. In the code above, if the user enters `3` the output will be `howdyhowdyhowdy`. If the user enters `no` the output will be `I said integer!`. Another good use for a try-except block is to check if a file exists before attempting to read from it. 
 
 ## File IO
+There are two ways to open a file. You need to specify a file identifier (variable name) in your code. You can use separate open/close commands, but don't forget to close your file using the same file identifier!
+```python
+myfile = open("my_file.txt")
+# do stuff
+myfile.close()
+```
+
+You can use the with/open command. This one doesn't require a separate close statement; the file will automatically close after executing all of the indented code.
+```python
+with open("my_file.txt") as myfile:
+    # do stuff
+```
+
+Use file designators when opening a file to specify how you plan to use it
+- `"r"` to read only
+- `"w"` to write to a new file
+- `"a"` to append to an existing file (cursor will be placed at the end of the file)
+- `"r+"` to read and write to an existing file (cursor will be placed at the beginning of the file)
+
+If no designator is specified, `"r"` will be used. Be careful when using `"w"`! If the file exists, its contents will be deleted!
+
+```python
+with open("new_file.txt", "w") as myfile:
+    # this will create a new file named new_file.txt
+
+myfile = open("old_file.txt", "a")
+# this will open an existing file for you to add to the end
+myfile.close()
+```
+
+There are many ways to read from a file. The examples below use a file identifier of `myfile`.
+- `myfile.read()` will read the entire file into one string
+- `myfile.readline()` will read one line of the file
+- `myfile.readlines()` will read the entire file into a list of strings, with each line as an element in the list
+- `list(myfile)` will read the entire file into a list of strings, with each line as an element in the list (same as readlines)
+
+You can also loop through the lines in a file
+```python
+for line in myfile:
+    print(line) # this will print the file double spaced
+```
+
+You can also use a while loop
+```python
+next_line = myfile.readline()
+while next_line != "":
+    print(next_line) # this will also print the file double spaced
+    next_line = myfile.readline()
+```
+
+Use the `write` command to write to your file. Note that the write command only takes a single string. It does NOT include a newline character (`\n`) so you need to remember to add it to your string.
+```python
+myfile.write("some text\n")
+myfile.write("next line\n")
+myfile.write("1+2=")
+myfile.write(f"{1+2}")
+```
 
 ## Modules
