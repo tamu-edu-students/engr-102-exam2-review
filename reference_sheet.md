@@ -9,7 +9,8 @@ Topics:
 3. [Functions](#functions)
 4. [Debugging](#debugging)
 5. [File IO](#file-io)
-6. [Modules](#modules)
+6. [String Processing](#string-processing)
+7. [Modules](#modules)
 
 ## Dictionaries
 In Python, dictionaries are created with curly braces `{}` and `key:value` pairs
@@ -194,5 +195,7 @@ myfile.write("next line\n")
 myfile.write("1+2=")
 myfile.write(f"{1+2}")
 ```
+
+## String Processing
 
 ## Modules
