@@ -197,5 +197,70 @@ myfile.write(f"{1+2}")
 ```
 
 ## String Processing
+You can remove leading and trailing whitespace (space, tab, and newline characters) from a string using `<str>.strip()`
+```python
+mystr = "\t      blue sky   \n".strip() # this will remove the spaces at the beginning and end (NOT the middle)
+print(mystr)
+```
+will output `blue sky`
+
+You can split a string into a list of strings using `<str>.split()`. By default, this will split on whitespace (space, tab, and newline characters). Or you can specify which character to split on.
+```python
+mystr = "line 1\nline 2\nline 3\n"
+mylist = mystr.split("\n")
+print(mylist)
+```
+will output `['line 1', 'line 2', 'line 3', '']`. Note the empty string at the end of the list due to the final newline character in the string. To prevent this from happening, use `<str>.strip()` before `<str>.split("\n")`. You can chain these in a single line of code.
+```python
+mystr = "line 1\nline 2\nline 3\n"
+mylist = mystr.strip().split("\n")
+print(mylist)
+```
+will output `['line 1', 'line2', 'line3']`
+
+You can join a list of strings into a single string using `<str>.join(<list of strings>)`
+```python
+mystr = "\t1,2,3,4,5  \n"
+mylist = mystr.strip().split(",")
+newlist = []
+for i in range(len(mylist)):
+    newlist.append(f"{float(mylist[i]) ** 2:.0f}")
+newstr = "0".join(newlist)
+print(newstr)
+```
+will output `10409016025`
 
 ## Modules
+You can import an entire module like this
+```python
+import math
+# type <module name>.<function> or <module name>.<constant> to use what you imported
+print(math.cos(math.pi / 4))
+```
+
+You can rename an entire module like this
+```python
+import math as m
+# type the redefined name of the module to use what you imported
+print(m.sqrt(2))
+```
+
+You can import just the functions you want like this
+```python
+from math import sqrt
+# no need to type the module name to use what you imported
+print(sqrt(2))
+```
+
+You can rename the functions you import like this
+```python
+from math import sqrt as sr, sin as s, pi as pie
+# no need to type the module name to use what you imported
+# type the redefined name(s) of the function(s)
+print(sr(2))
+print(s(pie / 4))
+```
+
+Make sure you are familiar with the `numpy` and `matplotlib` tutorials that your team learned in [Lab Topic 12 (team)](https://github.com/tamu-edu-students/engr-102-lab-12-team)
+
+Revised Fall 2026 SNR
