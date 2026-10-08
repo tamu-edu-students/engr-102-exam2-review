@@ -773,6 +773,8 @@ December 12
 Problem 56<br>
 A schematic for converting phone letters to digits mapping is shown in the image below. Write a Python program that prompts the user to enter a 10-character phone number in this format `XXX-XXXXXXX`. Your program should replace the last seven alphabetic characters by their equivalent digits and display the entered phone number in this format `XXX-XXX-XXXX`. For example, if the user enters `800-GOFEDEX`, your program output would convert the number to `800-463-3339`. You may assume that the last seven characters are alphabetic characters from A to Z. You MUST use a dictionary.
 
+![New #ios6 dial pad design | Jakob Montrasio | Flickr](exam1_practice_prob_7.jpg)
+
 Example output for input `800-GOFEDEX`:
 ```
 Enter a phone number in this format XXX-XXXXXXX: 800-GOFEDEX
