@@ -746,5 +746,88 @@ x = arange(0, 10.5, 0.5).reshape(7, 3)
 ```
 
 ## Code Writing Problems
+Problem 53<br>
+Write a Python program that uses a loop to sum the numbers 1 to 10 (inclusive) and print the sum.
+
+Problem 54<br>
+Create a top-down hierarchy for the following problem statement: A birdwatcher wants a program that will allow them to input their bird sightings and output requested statistical information. Inputs include the species/family, number of individuals, date, time, and location of sighting. Outputs include the total number of species seen (overall and in a particular location), total number of places or dates birded, number of sightings of a particular species, and family with the highest number of species seen.
+
+Problem 55<br>
+Write a Python program to take as input 5 birthdays from 5 users (1 each) and output them in chronological order. Dates should be entered with the month and day (not year) in the format `June 6` as a single input per user. Format the output as shown below. You MUST use a dictionary.
+
+Example output (using inputs `December 12`, `January 15`, `April 12`, `November 25`, and `April 1`):
+```
+User 1 please enter a birthday: December 12
+User 2 please enter a birthday: January 15
+User 3 please enter a birthday: April 12
+User 4 please enter a birthday: November 25
+User 5 please enter a birthday: April 1
+------------------------------------------------
+January 15
+April 1
+April 12
+November 25
+December 12
+```
+
+Problem 56<br>
+A schematic for converting phone letters to digits mapping is shown in the image below. Write a Python program that prompts the user to enter a 10-character phone number in this format `XXX-XXXXXXX`. Your program should replace the last seven alphabetic characters by their equivalent digits and display the entered phone number in this format `XXX-XXX-XXXX`. For example, if the user enters `800-GOFEDEX`, your program output would convert the number to `800-463-3339`. You may assume that the last seven characters are alphabetic characters from A to Z. You MUST use a dictionary.
+
+Example output for input `800-GOFEDEX`:
+```
+Enter a phone number in this format XXX-XXXXXXX: 800-GOFEDEX
+800-GOFEDEX is equivalent to 800-463-3339
+```
+
+Problem 57<br>
+Write a Python program that takes as input from the user the names, blood pressure, pulse, and blood glucose values of patients. Have your program prompt the user for the number of patients first, and then take as input that many names and their corresponding information. Store the information for each patient in a dictionary using the names as keys. Then, take as input from the user a name and print their information using the format shown below.
+
+Example output:
+```
+Enter the number of patients: 5
+Enter the next name and information: Amari 120/75 78 102
+Enter the next name and information: Blake 134/82 73 116
+...
+Enter a name: Cameron
+Here is information on Cameron:
+Blood pressure: 118/76, Pulse: 75, Blood glucose: 93
+```
+
+Problem 58<br>
+Write a Python function named `numcondition` which takes in as parameters two integers. If the integers add to more than 10 and multiply to more than 20, return `True`. If neither condition is satisfied, return `False`. If one condition is satisfied, return which condition. **Don't forget to document your function!**
+
+Examples:
+- `numcondition(2, 3)` returns `False`
+- `numcondition(20, 28)` returns `True`
+- `numcondition(12, -1)` returns `addition only`
+- `numcondition(3, 7)` returns `multiplication only`
+
+Problem 59<br>
+Assume a function `isprime()` is available for you to use in a module called `ENGR102` which determines whether or not a number is a prime number. The function `isprime()` takes in as a parameter a single integer, and returns either `True` or `False`. Write a Python program that takes as input from the user two integers. If the user gives bad input, continue to prompt them to try again until they enter two integers. Then, test only the odd numbers between and including those two numbers, to check if they are prime using the `isprime()` function. Have your program print a list of the prime numbers found. If no prime numbers were found, have your program print a message stating that. Start your code with: `from ENGR102 import isprime`. You do not have to write the function `isprime()`, you only need to call it.
+
+Example output (bad input):
+```
+Enter an integer: no
+Bad input! Try again: 1
+Enter another integer: 1.5
+Bad input! Try again: 5
+Primes: [3, 5]
+```
+
+Example output (good input):
+```
+Enter an integer: 8
+Enter another integer: 10
+No primes found!
+```
+
+Problem 60<br>
+Write a Python function named `max_min` that takes in as parameters six (6) integers and returns three (3) values in the following order: a list that includes the six (6) integers ordered from largest to smallest, the sum of the six (6) integers, and a count of the number of even integers. **Don't forget to document your function!**
+
+Examples:
+- `max_min(1, 6, 2, 5, 3, 4)` returns `[6, 5, 4, 3, 2, 1]`, `21`, and `3`
+- `max_min(8, 6, 7, 5, 3, 9)` returns `[9, 8, 7, 6, 5, 3]`, `38`, and `2`
+- `max_min(102, 67, 234, 216, 185, 217)` returns `[234, 217, 216, 185, 102, 67]`, `1021`, and `3`
+
 
 ## Short Answer Problems
