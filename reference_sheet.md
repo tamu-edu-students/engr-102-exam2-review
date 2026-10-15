@@ -1,5 +1,3 @@
-# Work in progress, come back later!
-
 # Exam 2 Reference Materials
 Check out the [reference materials from exam 1](https://github.com/tamu-edu-students/engr-102-exam1-review/blob/main/reference_sheet.md) for a review of those topics.
 
@@ -13,9 +11,9 @@ Topics:
 7. [Modules](#modules)
 
 ## Dictionaries
-In Python, dictionaries are created with curly braces `{}` and `key:value` pairs
+In Python, dictionaries are created with curly braces `{}` and `key:value` pairs. Unlike strings, lists, and tuples, dictionaries are not ordered and do not have numeric indices. A key can be any immutable data type, such as a number, string, Boolean, or tuple; a value can be any data type.
 ```python
-mydict = {"key 1" : "value 1", "key 2" : "value 2", "key 3" : "value 3"}
+mydict = {key1 : value1, key2 : value2, key3 : value3}
 ```
 
 You can add new key-value pairs to an existing dictionary using the key inside square brackets `[]` and assigning the corresponding value. You can access the value of a key-value pair using square brackets.
@@ -56,7 +54,7 @@ This class covers the following data types
 | Boolean | `True` evaluates to `1`, `False` evaluates to `0` | immutable |
 | String | `""`, `"Letters"`, `'my string'` | immutable |
 | List | `[]`, `[1, 2, 3]` | mutable |
-| Dictionary | `{}`, `{"one" : 1, "two" : 2}` | keys are immutable, values are mutable |
+| Dictionary | `{}`, `{"one" : 1, "two" : 2}` | mutable (as a data type), keys are immutable, values can be either |
 | Tuple | `()`, `(1, 2, 3)` | immutable |
 
 You can unpack a tuple to put each value into its own variable
