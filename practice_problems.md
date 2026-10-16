@@ -914,4 +914,154 @@ Enter an integer: 6
 6 is a perfect number
 ```
 
+Problem 66<br>
+The function below is very important in probability and statistics. Write a Python function that takes in as parameters individual values for $\mu$ and $\sigma$ and a list of values for $x$ and returns a list of the values of the function evaluated at those values. **Don't forget to document your function!**
+
+$$P(x)=\frac{1}{\sqrt{2 \pi \sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$
+
+In your main code, call your function, then plot the results. Be sure to include a title and axis labels and show the plot.
+
+Problem 67<br>
+The Taylor series to approximate $\cos⁡(x)$ for all values of x is defined as
+
+$$\cos(x)=\sum_{n=0}^{\infty}\frac{(-1)^n}{(2n)!}x^{2n}$$
+
+Write a Python function named `tay_term` that takes in as parameters values for $n$ and $x$, then calculates and returns the value of the term for only that value of $n$. For example, if the values $n=3$ and $x=0.5$ are passed to the function, it would return 
+
+$$\frac{(-1)^3}{(2\cdot3)!}0.5^{2\cdot3}=-0.00002170138$$
+
+In your main code take as input from the user a value for $x$, then approximate the value for cosine of $x$ by starting at $n=0$ and repeatedly call the function `tay_term` with increasing values of $n$, and sum those returned values until the absolute value returned by the function is less than $10^{-7}$. Display your result with seven (7) decimal places. **Dont forget to document your function!**
+
+Example output:
+```
+Enter a value for x: 0.5
+The cosine of 0.5 is 0.8775825
+```
+
+Problem 68<br>
+Without knowing the contents of `fileID.txt` and after executing the following three lines of code, write an additional line of code that writes the first character and last character of `file_string` to `myfile` separated by a colon (`:`) and followed by a new line.
+
+```
+with open("fileID.txt", "r") as file1:
+    file_string = file1.read().strip()
+with open("output_file.txt", "w") as myfile:
+    ## your additional line of code goes here ##
+```
+
+Problem 69<br>
+Write a Python program that takes as input from the user a filename, opens the file, reads the contents, and counts how many times each letter appears, then prints the results to the screen. Combine uppercase and lowercase letters, and only print the letters that appear in the file. This problem is good practice for using dictionaries.
+
+Example output:
+```
+Enter a filename: sample.txt
+sample.txt contains the following letters:
+a: 11, c: 6, d: 7, e: 8, f: 1, g: 2, h: 3, i: 2, l: 1, m: 4, n: 9, o: 8, p: 2, r: 8, s: 4, t: 9, u: 4, w: 2, y: 1
+```
+
+Problem 70<br>
+Write a Python program that will take as input from the user grades from a recent ENGR 102 quiz, save it to a file named `grades.txt`, and print the average quiz grade to the screen. Have your program prompt the user for the number of students first, and then take as input that many names and their corresponding scores. You may assume the user provides valid input. Write your code using standard file I/O commands. Use the format shown below for your output file, which includes a header line and aligned columns.
+
+Example output:
+```
+Enter the number of students: 5
+Enter the next name and score: Amari 85
+Enter the next name and score: Blake 76.5
+Enter the next name and score: Cameron 89
+Enter the next name and score: Dylan 59.5
+Enter the next name and score: Emerson 97
+The average grade for this quiz is 81.4
+```
+
+Example `grades.txt` file:
+```
+Name     Score
+Amari    85.0
+Blake    76.5
+Cameron  89.0
+Dylan    59.5
+Emerson  97.0
+```
+
+Problem 71<br>
+A file named `item_cost.dat` is stored on a computer's hard drive. In a text editor the file displays the first few lines of the file below. The rest of the file is not shown. Write a Python program that reads the contents of this file, determines the most expensive item and prints the information about that item and its cost to the screen using the format shown below. Write your code using standard file I/O commands; do not use the csv module or any csv reader available in some Python package. Do not use any built-in sorting functions. You may assume that all costs are unique (no two items cost the same).
+
+Contents of `item_cost.dat`:
+```
+Item,Cost ($)
+Item1,5.75
+Item2,3.50
+Item3,2.75
+Item4,4.50
+...
+```
+
+Example output:
+```
+The most expensive item is Item67 and costs $8.19
+```
+
+Problem 72<br>
+A file named `grades.txt` contains exam grades. There is no header and each grade is on a new line in the file (the file contains only numbers). Write a Python program that opens the file, calculates the average, maximum, and minimum scores, then prints the information to the screen. Write your code using standard file I/O commands; do not use the csv module or any csv reader available in some Python package. 
+
+Problem 73<br>
+A sentence is a set of words that are separated by a single space with no leading or trailing spaces. The file `sentences.txt` contains many sentences, one on each line. A sample is shown below, the entire file is over one hundred lines long. Write a Python program to read the contents of this file and print the maximum number of words that appear in a single sentence.
+
+Contents of `sentences.txt`:
+```
+This is a sentence.
+This is also a sentence!
+The quick brown fox jumped over the lazy dog.
+How much wood can a woodchuck chuck if a woodchuck could chuck wood?
+...
+```
+
+Example output:
+```
+The maximum number of words in a single sentence is 29
+```
+
+Problem 74<br>
+A text file named `data.dat` is stored on a computer's hard drive. In a text editor the file displays the snippet below. The entire file is over one hundred lines long.
+
+Contents of `data.dat`:
+```
+# Created on November 5, 2025 
+# Time,Temperature,Windspeed 
+# (min),(deg F),(knots) 
+0,33.47,1.27 
+5,32.59,1.95 
+10,33.62,0.76 
+15,33.79,1.12
+...
+```
+
+Write a Python program that reads the contents of this file, assigns the header lines to a variable that is a list of strings, and assigns the data to a variable that is a floating point numpy array that contains all of the data in the file. (The data should be in an $n$x3 array.) Then, find and print the minimum temperature and maximum windspeed recorded in the file. Write this code using standard file I/O commands; do not use the csv module or any other csv reader that you may know of in some Python package.
+
+Example output (using the entire file):
+```
+Minimum temperature is 31.28 F
+Maximum windspeed is 7.82 knots
+```
+
+Problem 75<br>
+A file named `peanut.dat` is stored on a computer's hard drive. In a text editor the file displays the first few lines of the file below. The rest of the file is not shown. Write a Python program that reads the contents of this file and prints the number, major diameter, minor diameter, and diameter ratio of each peanut. Format the output as shown below. You MUST use f-strings; do NOT use the `round()` function. Write your code using standard file I/O commands; do not use the csv module or any csv reader available in some Python package.
+
+Contents of `peanut.dat`:
+```
+Number    MajorDia    MinorDia
+     1       17.61        5.46
+     2       16.47        5.87
+     3       18.08        6.12
+...
+```
+
+Example output:
+```
+Number MajorDia MinorDia Ratio
+   1     17.61    5.46   3.23
+   2     16.47    5.83   2.81
+   3     18.08    6.12   2.95
+...
+```
+
 ## Short Answer Problems
