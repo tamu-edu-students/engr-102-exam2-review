@@ -831,5 +831,87 @@ Examples:
 - `max_min(8, 6, 7, 5, 3, 9)` returns `[9, 8, 7, 6, 5, 3]`, `38`, and `2`
 - `max_min(102, 67, 234, 216, 185, 217)` returns `[234, 217, 216, 185, 102, 67]`, `1021`, and `3`
 
+Problem 61<br>
+Write a Python function that takes in as parameters two `numpy` arrays `A` and `B`, checks that the inner dimensions of `A` and `B` match, and if they do calculate and return `C = AB` (matrix multiplication (not elementwise multiplication)). If they don't match, have your function return an empty numpy array. The inner dimensions of two matrices multiplied together are the two interior numbers. For matrices with dimensions 2x3 and 3x4, the inner dimensions match (both 3). For matrices with dimensions 3x2 and 3x4, the inner dimensions do not match (2 and 3). **Don't forget to document your function!**
+
+Examples:<br>
+Array A: `[[0 1 2] [3 4 5]]`<br>
+Array B: `[[ 0  1  2  3] [ 4  5  6  7] [ 8  9 10 11]]`<br>
+Function returns `[[20 23 26 29] [56 68 80 92]]`
+
+Array A: `[[0 1] [2 3]]`<br>
+Array B: `[[ 0  1  2  3] [ 4  5  6  7] [ 8  9 10 11]]`<br>
+Function returns `[]`
+
+Problem 62<br>
+Write a Python function named `myinsert` that takes in as parameters a sorted string of arbitrary length and a character (string of length one). Have your function insert the character so the new string remains sorted, and return it. Do NOT use the `sort` or `sorted` functions. **Don't forget to document your function!**
+
+Examples:
+- `myinsert("abde", "c")` returns `"abcde"`
+- `myinsert("abdehijmnqr", "y")` returns `"abdehijmnqry"`
+- `myinsert("123589", "7")` returns `"1235789"`
+
+Now write a second Python function named `myinsert2` that takes in as parameters a sorted list of arbitrary length and a value. Have your function insert the value so the new list remains sorted, and return it. Do NOT use the `sort` or `sorted` functions. **Don't forget to document your function!**
+
+Examples:
+- `myinsert2([1, 2, 4, 5], 3)` returns `[1, 2, 3, 4, 5]`
+- `myinsert2([1, 4, 5, 12, 20, 28], 0)` returns `[0, 1, 4, 5, 12, 20, 28]`
+- `myinsert2(["a", "b", "d", "e"], "c")` returns `["a", "b", "c", "d", "e"]`
+
+Problem 63<br>
+Write a Python function that takes in as a parameter a list of numbers then calculates and returns the mean ($\bar{x}$) and sample variance ($s^2$) of the numbers. Do NOT use the `numpy` or `statistics` modules. Instead, calculate the values using the equations below. You MUST use a loop. **Dont forget to document your function!**
+
+$$\bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_i$$
+
+$$s^2=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar{x})^2$$
+
+Now rewrite your function using the `numpy` module.
+
+Problem 64<br>
+An Armstrong number is a positive integer, where the sum of its digits, each raised to the power of the number of digits, is equal to the integer itself. For example, 371 is an Armstrong number because $3^3 + 7^3 + 1^3 = 371$. Write a Python function called `Armstrong_number` that takes in as parameters two positive integers and returns a list containing all the Armstrong numbers between and including these two integers. Next, write main code that takes as input from the user two integers. If the user gives bad input, continue to prompt them to try again until they enter two integers that are both positive values. Then, call your function and print the resulting list. **Don't forget to document your function!**
+
+Example output (bad input):
+```
+Enter an integer: -1
+Need a positive integer: 0.5
+Bad input! Try again: 4
+Enter another integer: 2.7
+Bad input! Try again: -12
+Need a positive integer: 12
+Armstrong numbers: [4, 5, 6, 7, 8, 9]
+```
+
+Example output (good input):
+```
+Enter an integer: 100
+Enter another integer: 400
+Armstrong numbers: [153, 370, 371]
+```
+
+Problem 65<br>
+A perfect number is a positive integer greater than 1 that is equal to the sum of its proper divisors. The smallest perfect number is 6 since the sum of the proper divisors for 6 are 1, 2, and 3 which added together equals 6. The integer 28 is also a perfect number since the divisors for 28 are 1, 2, 4, 7, and 14 and the sum of these divisors equals 28. Write a Python function that takes as input a positive integer greater than or equal to 1, and returns `True` if the number is a perfect number or `False` if it is not. Next, write main code that takes as input from the user one integer greater than or equal to 1. If the user gives bad input, continue to prompt them to try again until they enter a positive integer. Then, call your function and print if the number is a perfect number (or not). **Don't forget to document your function!**
+
+**Hint:** The proper divisors of a positive integer N are those numbers, other than N itself, that divide N without remainder. For N > 1 they will always include 1, but for N == 1 there are no proper divisors. The proper divisors of 6 are 1, 2, and 3. The proper divisors of 100 are 1, 2, 4, 5, 10, 20, 25, and 50.
+
+Example output (bad input):
+```
+Enter an integer: -5
+Need a positive integer: 0.5
+Bad input! Try again: a
+Bad input! Try again: 28
+28 is a perfect number
+```
+
+Example output (good input):
+```
+Enter an integer: 1
+1 is not a perfect number
+```
+
+Example output (good input):
+```
+Enter an integer: 6
+6 is a perfect number
+```
 
 ## Short Answer Problems
