@@ -73,8 +73,10 @@ print(x, y)
 
 Be careful when assigning a mutable data type in a tuple. The tuple's bindings are immutable, however the objects bound to it may change if they are a mutable data type.
 ```python
+myint = 10
 mylist = [1, 2, 3]
-mytuple = (mylist, 10)
+mytuple = (mylist, myint)
+myint = 12
 mylist[0] = 5
 print(mytuple)
 ```
