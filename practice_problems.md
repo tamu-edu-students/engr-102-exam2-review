@@ -1,5 +1,3 @@
-# Work in progress, come back later!
-
 # Exam 2 Practice Problems
 The following problems are for practice when studying for Exam 2. It is recommended that you attempt them using pencil and paper (NOT an IDE) like you will for the exam. After attempting a problem, check your solution by typing it into your favorite IDE and debug.
 
@@ -1064,4 +1062,126 @@ Number MajorDia MinorDia Ratio
 ...
 ```
 
+Problem 76<br>
+It's flounder fishing season! The Fishing Pier Company is keeping track of each fisherman's catch in a file named `fishtotals.txt`. A sample is shown below, the entire file is over 100 lines long. 
+
+Contents of `fishtotals.txt`:
+```
+Fisherman A: catfish 12 inches, tarpon 20 inches
+Fisherman B: trout 15 inches, flounder 20 inches
+Fisherman C: flounder 12 inches, redfish 20 inches, flounder 16 inches
+...
+```
+
+Write a Python program that reads the contents of `fishtotals.txt`, identifies each flounder caught along with its size, and writes the information to a new file named `flounder.txt`. At the end of the file include the total number of flounders caught. Write your code using standard file I/O commands; do not use the csv module or any csv reader available in some Python package.
+
+Contents of `flounder.txt`:
+```
+Fisherman B: flounder 20 inches
+Fisherman C: flounder 12 inches, flounder 16 inches
+...
+Total: 102 flounders caught
+```
+
+Problem 77<br>
+Draw the plot produced by the following code:
+```
+import numpy as np
+import matplotlib.pyplot as plt
+x = np.linspace(-2, 2, 25)
+y1 = x
+y2 = x ** 2
+plt.plot(x, y1, "g", linewidth = 3)
+plt.plot(x, y2, "k", marker = "o", markerfacecolor = "b")
+plt.axis([-2, 2, -2, 4])
+plt.xlabel("x")
+plt.ylabel("f(x) ")
+plt.title("Plots for 2 polynomials")
+plt.legend(["straight", "curved"], loc = "upper center")
+plt.show()
+```
+
+
 ## Short Answer Problems
+These review questions are to see how well you understand the concepts. There won't be any short answer problems like this on the exam, but if you can answer them, you have a good understanding of the material. If you struggle with any of these questions, keep studying that topic!
+
+Problem 78<br>
+List 5 good coding practices that have been mentioned in this course.
+
+Problem 79<br>
+In the following dictionary, identify the keys and values. Write the command to add the key `"Orange"` with value `1` to the dictionary. Write code to loop through the dictionary and check for a particular key or value.
+```
+mydict = {"Apple" : 3, "Pear" : 5, "Banana" : 2}
+```
+
+Problem 80<br>
+Explain how dictionaries are different from lists, and how lists are different from tuples.
+
+Problem 81<br>
+Identify and explain 3 ways strings are similar to lists.
+
+Problem 82<br>
+List all of the data types we have seen in this course and provide an example of each. Identify which ones are mutable and which are immutable.
+
+Problem 83<br>
+In your own words, explain the difference between the top-down and bottom-up design methods. Name at least one advantage and one disadvantage for each.
+
+Problem 84<br>
+Describe the various components of a hierarchy. How can we use one in program design?
+
+Problem 85<br>
+Does it matter if we use the same variable names inside a user defined function and the main program? Why (not)?
+
+Problem 86<br>
+Does it matter where in our code we write function definitions?
+
+Problem 87<br>
+Can functions access main memory? How do we pass information into a function? Can functions return multiple values?
+
+Problem 88<br>
+What type of coding error do you hate the most and why?
+
+Problem 89<br>
+Explain what happens when the following code is executed: `print(int("5.5"))`
+
+Problem 90<br>
+When you are trying to fix your code, what are some alternatives to using a debugger?
+
+Problem 91<br>
+When would it be best to use the `myfile = open(...)` and `myfile.close()` commands for opening files as opposed to the `with open(...) as myfile:` command?
+
+Problem 92<br>
+When opening files, what is the difference between the designators `r`, `w`, `r+`, and `a`?
+
+Problem 93<br>
+What are the differences between `myfile.read()`, `myfile.readline()`, `myfile.readlines()`, and `list(myfile)`?
+
+Problem 94<br>
+What command(s) are used to remove the leading and trailing whitespace in a string? To separate a string into a list of its components with a specified delimiter? Write an example using both.
+
+Problem 95<br>
+Write the command to print the value of `pi` to 4 decimal places to the screen. Don't forget to import `pi` from the `math` module!
+
+Problem 96<br>
+Write the command to import the `coolfunc` function from the `neatomod` module in the `funpack` package and rename it to `coolf`. Now write the command to import all functions from the `neatomod` module. What command can we use to display all of the functions inside the module?
+
+Problem 97<br>
+What are the differences between `np.arange()`, `np.array()`, and `np.linspace()`? How many rows and columns will the matrix `np.arange(15).reshape(5, 3)` have?
+
+Problem 98<br>
+What are the differences between `plt.plot()`, `plt.bar()`, `plt.hist()`, and `plt.scatter()`? How do you set the color of a line? The marker shapes? The axis labels? The title? The legend?
+
+Problem 99<br>
+Why is it important to include docstrings when writing functions?
+
+Problem 100<br>
+Please review all lecture examples and quizzes.
+
+Problem 101<br>
+Please review examples in your textbook.
+
+Problem 102<br>
+Please review optional labs for more coding practice.
+
+
+Revised Fall 2026 SNR
