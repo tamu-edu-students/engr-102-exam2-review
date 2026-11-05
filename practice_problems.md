@@ -35,18 +35,18 @@ print(f"{i} + j")
 ```
 ```
 # problem 3
-sum = 1
+sums = 1
 for i in range(1, 5):
     while i < 3:
-        sum += i
+        sums += i
         i += 1
-        if sum % 2 == 0:
-            sum += 1
+        if sums % 2 == 0:
+            sums += 1
             break
     else:
-        sum *= i
-    sum -= 2
-print(sum)
+        sums *= i
+    sums -= 2
+print(sums)
 ```
 ```
 # problem 4
