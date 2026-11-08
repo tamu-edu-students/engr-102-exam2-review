@@ -193,7 +193,7 @@ def add1(x):
         return x + 1
     else:
         return "Too big!"
-print(add1(1), add1(29))
+print(add1(1), add1(12))
 ```
 ```
 # problem 19
@@ -409,7 +409,7 @@ def output(mystr, num):
             outstring = outstring[:-1]
         outfile.write(mystr[0])
     return outstring
-print(output("tacocat", 6))
+print(output("reknits", 6))
 ```
 ```
 # problem 38
@@ -463,7 +463,7 @@ with open("scores.csv") as file1:
     for i in file1:
         i = i.strip().split(",")
         score_dict[i[0]] = i[1:]
-del(score_dict["ID"]
+del(score_dict["ID"])
 avg1, avg2, avg3 = 0, 0, 0
 for i in score_dict:
     avg1 += int(score_dict[i][0])
@@ -498,7 +498,7 @@ Given the list: `my_list = [1, 2, 3, 4, 5]`, which of the following code snippet
 ```
 # answer A
 for i in range(0, 5, 2):
-    print(my_list[1], end=", ")
+    print(my_list[i], end=", ")
 ```
 ```
 # answer B
@@ -613,6 +613,7 @@ Which of the following code snippets below will execute without error?
 # answer A
 listA = [1, 2, 3, 4, 5]
 listB = [4, 6, 8, 10, 12]
+listC = []
 for i in range(5):
     listC += [listA[i] + listB[i]]
 print(listC)
@@ -630,7 +631,7 @@ print(listC)
 # answer C
 myList = [7, 8, 6, 4, 2]
 for num in myList:
-    if num < 3
+    if num < 3:
         print(item)
 ```
 ```
@@ -659,8 +660,8 @@ def func1(x):
     resid = 0
     avg = sum(x) / len(x)
     for i in x:
-        resid += (i – avg) ** 2
-    stdev = resid / (len(x) – 1)
+        resid += (i - avg) ** 2
+    stdev = resid / (len(x) - 1)
     error = func2(stdev, len(x))
     return error
 data = [2, 5, 3, 7, 4, 9, 1, 2, 5, 8, 9, 3, 4]
@@ -668,19 +669,18 @@ print(func1(data))
 ```
 ```
 # answer G
-from math import sqrt
 mylist, square = [1, 3, 5, 7, 9], []
 for i in mylist:
-    square += i ^ 2
+    square += i ** 2
 print(sum(square))
 ```
 
 Problem 49<br>
-What are the contents of the file `results.csv` after the following lines of code have executed?
+What are the contents of the file `result.csv` after the following lines of code have executed?
 ```
 def output(mystr, num):
     outstring = mystr
-    with open("results.csv", "w") as outfile:
+    with open("result.csv", "w") as outfile:
         for i in range(num):
             outfile.write(outstring[-1] + ",")
             outstring = outstring[:-1]
@@ -690,7 +690,7 @@ def output(mystr, num):
             for i in range(len(mystr) – (num + 1), -1, -1):
                 outfile.write(outstring[i] + ",")
         return outstring
-output("tacocat", 5)
+output("gateman", 5)
 ```
 
 Problem 50<br>
@@ -741,6 +741,7 @@ Write a single line of code to import either an entire module or just the requir
 ```
 ## Your single line of code here ##
 x = arange(0, 10.5, 0.5).reshape(7, 3)
+print(f"x = {x}")
 ```
 
 ## Code Writing Problems
