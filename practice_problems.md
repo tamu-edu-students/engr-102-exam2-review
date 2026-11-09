@@ -595,7 +595,7 @@ the_str = "A1B2C3"
 - `myvar = the_list[the_str[1]]`
 - `a_var = the_list[0] + int(the_str[-1])`
 - `some_var = the_str, the_list`
-- `the_var = the_str[the_str[2]]`
+- `the_var = the_str[the_list[1]]`
 - `a = the_str[the_list[2]]`
 
 Problem 47<br>
