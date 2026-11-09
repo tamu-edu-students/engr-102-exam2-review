@@ -636,6 +636,8 @@ for num in myList:
 ```
 ```
 # answer D
+with open("data.txt", "w") as newfile:
+    newfile.write("15\n30\n45\n90\n60\n60")
 data_list = []
 numbers.open("data.txt", "r")
 for line in numbers:
